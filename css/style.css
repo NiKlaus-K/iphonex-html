@@ -1,0 +1,181 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*::after {
+	box-sizing: border-box;
+}
+
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	/* 主轴居中 */
+	justify-content: center;
+	/* 交叉轴居中 */
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+
+.flex {
+	display: flex;
+	/* 主轴居中 */
+	justify-content: center;
+	/* 交叉轴居中 */
+	align-items: center;
+}
+
+/* iphone区域 */
+.iphone-container {
+	flex: 1;
+	height: 534px;
+	width: 272px;
+}
+
+/* 边框设置 */
+.iphone {
+	height: 526px;
+	width: 262px;
+	border: solid #242424 2px;
+	border-radius: 2rem;
+	background: url(../images/bg.jpg) no-repeat center;
+	background-size: 95% auto;
+}
+
+.iphone-a {
+	height: 524px;
+	width: 260px;
+	border: solid #aaaaaa 2px;
+	border-radius: 2rem;
+}
+
+.iphone-b {
+	height: 520px;
+	width: 256px;
+	border: solid #fff 2px;
+	border-radius: 2rem;
+}
+
+.iphone-c {
+	/* height: 512px;
+	width: 248px;
+	 #a6a6a6*/
+	height: 506px;
+	width: 242px;
+	border: solid transparent 0px;
+	border-radius: 1.8rem;
+	/* 设置边框阴影
+	 * 带inset是指内边框
+	 */
+	box-shadow: 0 0 10px 4px #171717,
+		0 0 10px 4px #a6a6a6,
+		0px 0px 0px 4px black inset;
+}
+
+/* 顶部刘海区域 */
+.iphone-top {
+	width: 161px;
+	height: 22px;
+	background-color: black;
+	border-bottom-left-radius: 0.8rem;
+	border-bottom-right-radius: 0.8rem;
+	align-self: flex-start;
+}
+
+/* 听筒 */
+.receiver {
+	background-color: #121212;
+	height: 8px;
+	width: 45px;
+	border: solid #000000 2px;
+	border-radius: 1.6em;
+}
+
+/* .camera{
+	width: 15px;
+	height: 15px;
+	background-color: black;
+	border: solid transparent 0px;
+	border-radius: 2em;
+	box-shadow: 0px 0px 4px  4px #3782d5 inset,
+				0px 0px 4px  4px black inset,
+				0px 0px 4px  4px #3782d5 inset;
+} */
+/* 摄像头 */
+.camera img {
+	height: 14px;
+	width: 14px;
+	margin-left: 10px;
+}
+
+/* 左侧按键 */
+.btn-left {
+	/* 开启flex */
+	display: flex;
+	/* 主轴为垂直方向 */
+	flex-direction: column;
+	/* 主轴上对齐 */
+	justify-content: flex-start;
+	/* 交叉轴右对齐*/
+	align-items: flex-end;
+	/* ☆☆☆☆☆☆☆☆☆☆☆☆☆
+	 * 解决 主轴和交叉轴无法按照期望显示的问题
+	 */
+	height: 100%;
+}
+
+/* 静音键 */
+.sound-btn-mute {
+	width: 2px;
+	height: 20px;
+	border: solid #4a4a4a 1px;
+	position: relative;
+	top: 73px;
+}
+
+/* 音量键 */
+.sound-btn-add {
+	width: 2px;
+	height: 40px;
+	border: solid #4a4a4a 1px;
+	position: relative;
+	top: 111px;
+	/* 减掉“静音”按键的高度 */
+	transform: translateY(-20px);
+}
+
+.sound-btn-subtract {
+	width: 2px;
+	height: 40px;
+	border: solid #4a4a4a 1px;
+	position: relative;
+	top: 160px;
+	/* 减掉“静音”+“音量加” 按键的高度 */
+	transform: translateY(-60px);
+}
+
+/* 右侧按键 */
+.btn-right {
+	/* 开启flex */
+	display: flex;
+	/* 主轴为垂直方向 */
+	flex-direction: column;
+	/* 主轴上对齐 */
+	justify-content: flex-start;
+	height: 100%;
+}
+
+/* 开机键 */
+.btn-start {
+	width: 2px;
+	height: 60px;
+	border: solid #4a4a4a 1px;
+	position: relative;
+	top: 125px;
+}
